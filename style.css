@@ -6,34 +6,39 @@
 }
 
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #f8f8f8;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    padding: 15px 10%;
+    background: white;
 }
 
 .logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    border: 5px solid #d9534f;
-    font-size: 20px;
-    font-weight: bold;
+    width: 40px; 
+    height: 40px; 
+    border: 3px solid #d9534f;
+    font-size: 20px; 
+    font-weight: bold; 
     color: #6c9cd2;
-    margin-right: 200px;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: start; 
-    padding: 15px 10%;
-    background: white;
+    margin-right: 250px; 
 }
 
 .nav-links {
     display: flex;
+    align-items: center; 
     list-style: none;
-    gap: 80px; 
+    gap: 40px; 
 }
 
 .nav-links a {
@@ -67,9 +72,10 @@ nav {
     justify-content: space-between; 
     padding: 100px 10%; 
     background: linear-gradient(to right, #fff, #f8f8f8); 
-    min-height: 80vh; 
+    min-height: calc(100vh - 80px);
     position:relative;
     overflow: visible;
+    top: -10px;
 }
 
 .hero-text { 
@@ -160,6 +166,7 @@ nav {
 .white-box {
     position: absolute;
     font-size: 20px;
+    color: gray;
     bottom: 60px;
     left: 50%;
     transform: translateX(-50%);
@@ -172,10 +179,17 @@ nav {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px; 
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 30px rgba(26, 25, 25, 0.1);
     z-index: 10;
     text-align: center; 
 }
+
+.white-box span:nth-child(1) { font-family: "Georgia", "Times New Roman", serif; font-weight: bold; } 
+.white-box span:nth-child(2) { font-family: "Dancing Script", cursive; font-style: italic; } 
+.white-box span:nth-child(3) { font-family: "Poppins", sans-serif; font-weight: 500; } 
+.white-box span:nth-child(4) { font-family: "Lato", sans-serif; font-weight: 400; } 
+.white-box span:nth-child(5) { font-family: "Montserrat", sans-serif; font-weight: bold; letter-spacing: 1px; } 
+
 
 @media (max-width: 768px) {
     nav {
@@ -192,7 +206,8 @@ nav {
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 50px 5%;
+        padding-top: 80px; 
+        padding-bottom: 50px;
     }
 
     .hero-text h1 {
